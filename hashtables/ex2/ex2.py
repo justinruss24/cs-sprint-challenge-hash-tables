@@ -14,8 +14,8 @@ def reconstruct_trip(tickets, length):
     trips = [None] * length
 
     # cache all the tickets as (source:destination)
-    for ticket in tickets:
-        cache[ticket.source] = ticket.destination
+    for t in tickets:
+        cache[t.source] = t.destination
 
     # first flight is initiated with key None
     current = cache["NONE"]
